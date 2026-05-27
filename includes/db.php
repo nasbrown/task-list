@@ -4,6 +4,22 @@ declare(strict_types = 1);
 
 //Database connection
 
-//function connect(): PDO{
-    //$dsn = "sqlite:" . __DIR__ . DB_DIR . "/db.sqlite";
-//}
+function connect(): PDO{
+    
+    $pdo = new PDO("sqlite:" . DB_DIR . "/db.sqlite");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    return $pdo;
+}
+
+function loadSchema(PDO $pdo, string $schemaFile): void{
+    $sql = file_get_contents($schemaFile);
+
+    if(!$sql){
+        die("Failed to load schema file from database");
+    }
+
+    $pdo->exec($sql);
+
+    echo "Schema File was successfully uploaded!";
+}

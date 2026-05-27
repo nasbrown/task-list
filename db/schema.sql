@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS tasks(
+    id PRIMARY KEY AUTOINCREMENT,
+    task TEXT NOT NULL,
+    created_at DATETIME
+);
