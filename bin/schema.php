@@ -5,3 +5,5 @@ declare(strict_types=1);
 require_once('./../bootstrap.php');
 
 loadSchema(connect(), DB_DIR . '/schema.sql');
+
+//echo DB_DIR . '/schema.sql';
