@@ -6,7 +6,4 @@
     <title>Task List</title>
 </head>
 <body>
-    <header>
-        <h1>Nas' Task List</h1>
-    </header>
     <main>

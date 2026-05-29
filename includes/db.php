@@ -23,3 +23,11 @@ function loadSchema(PDO $pdo, string $schemaFile): void{
 
     echo "Schema File was successfully uploaded!";
 }
+
+function insertTask(PDO $pdo, $string $task): bool{
+    $sql = "INSERT INTO ";
+}
+//InsertTask function
+//Delete Task function
+//Check Task function and delete later
+//Update Task function

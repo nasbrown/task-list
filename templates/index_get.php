@@ -1,3 +1,6 @@
 <section>
-    <h1>Hey!</h1>
+    <form action="" method="post">
+        <input type="text">
+        <button id="new-btn" type="submit">Add Task</button>
+    </form>
 </section>
