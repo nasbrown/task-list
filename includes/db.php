@@ -25,7 +25,9 @@ function loadSchema(PDO $pdo, string $schemaFile): void{
 }
 
 function insertTask(PDO $pdo, $string $task): bool{
-    $sql = "INSERT INTO ";
+    $sql = "INSERT INTO tasks (task)  VALUES ($task)";
+    $stmt = $pdo->prepare($sql);
+    
 }
 //InsertTask function
 //Delete Task function
